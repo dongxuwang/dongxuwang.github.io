@@ -97,7 +97,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dongxuwang.com/about/index.html" data-id="cjccrzzxw000179hok4wrldlj" class="article-share-link">分享</a>
+      <a data-url="https://dongxuwang.com/about/index.html" data-id="cjccvf2jn0001djho0ho9ey2d" class="article-share-link">分享</a>
       
       
       
@@ -158,6 +158,8 @@
        
       
       
+           <div id="gitment_comments"></div>
+    
   </div>
  
   
@@ -178,6 +180,10 @@
     <h3 class="widget-title recent-posts">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/01/13/deploy-seafile-with-onlyoffice/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2018/01/11/hello-world/">Hello World</a>
@@ -202,7 +208,7 @@
       主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
     </div>
      <div id="footer-right">
-      联系方式&nbsp;|&nbsp;wangdx@live.cn
+      联系方式&nbsp;|&nbsp;https://dongxuwang.com
     </div>
   </div>
 </footer>
@@ -242,6 +248,22 @@ window.onload = function() {
 
 <!-- author:forvoid begin -->
 <!-- author:forvoid begin -->
+
+  <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script> 
+  <script>
+  var gitment = new Gitment({
+    // id: '页面 ID', // 可选。默认为 location.href
+    owner: '4261431',
+    repo: 'dongxuwang.github.io',
+    oauth: {
+    client_id: '0dfb5b73a79fbfa09e0c',
+    client_secret: '759e88867ff5c9052379421924ad6813564de77b',
+    }
+  })
+  gitment.render(document.getElementById("gitment_comments"))
+</script>
+
 
 <!-- author:forvoid end -->
 
