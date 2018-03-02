@@ -1,0 +1,41 @@
+language: node_js
+node_js: stable
+branches:
+  only:
+    - hexo
+
+env:
+ global:
+    - GH_REF: github.com/dongxuwang/dongxuwang.github.io.git
+# Travis-CI Caching
+cache:
+  apt: true
+  directories:
+    - node_modules
+
+# S: Build Lifecycle
+before_install:
+  - npm install hexo-cli -g
+
+install:
+  - npm install
+
+script:
+  - hexo clean
+  - hexo generate
+
+
+after_success:
+  - git clone https://${GH_REF} .deploy_git
+  - cd .deploy_git
+  - git checkout master
+  - cd ../
+  - mv .deploy_git/.git/ ./public/
+  - cd ./public
+  - git init
+  - git config user.name "Echo Wang"
+  - git config user.email "dongxu@apache.org"
+  - git add .
+  - git commit -m "Update docs"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+
