@@ -3,9 +3,7 @@ hidden = true
 title = "Home"
 +++
 
-* [About Me](/pages/about)
-* [中文博客 / Blog in Chinese](/posts)
-* [Blog in English](/posts-ng)
+* [Blog](/posts)
 
 I'm also available at:
 
